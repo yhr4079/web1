@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="button" value="night" onclick="
+      document.querySelector('body').style.backgroundColor='black';
+      document.querySelector('body').style.color='white';
+    ">
+    <input type="button" value="day" onclick="
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('body').style.color='black';
+    ">
+    <input id="night_day" type="button" value="night" onclick="
+    if (document.querySelector('#night_day').value === 'night') {
+      document.querySelector('body').style.backgroundColor='black';
+      document.querySelector('body').style.color = 'white';
+      document.querySelector('#night_day').value = 'day';
+    } else {
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('body').style.color = 'black';
+      document.querySelector('#night_day').value = 'night';
+    }
+    ">
+
+
+    <input  type="button" value="night" onclick="
+    if (document.querySelector('body').dataset.mode === 'night') {
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('body').style.color = 'black';
+      document.querySelector('body').dataset.mode = 'day';
+      this.value = 'night';
+    } else {
+      document.querySelector('body').style.backgroundColor='black';
+      document.querySelector('body').style.color = 'white';
+      document.querySelector('body').dataset.mode = 'night';
+      this.value = 'day';
+    }
+    ">
+    <h2>JavaScript</h2>
+    <p>
+    JavaScript (/ˈdʒɑːvəˌskrɪpt/), often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it for client-side page behavior, and all major web browsers have a dedicated JavaScript engine to execute it.
+    </p>
+    <input id="night_day2" type="button" value="night" onclick="
+    var dragon = document.querySelector('body');
+    if (this.value === 'night') {
+      dragon.style.backgroundColor='black';
+      dragon.style.color = 'white';
+      this.value = 'day';
+    } else {
+      dragon.style.backgroundColor='white';
+      dragon.style.color = 'black';
+      this.value = 'night';
+    }
+    ">
+  </body>
+</html>

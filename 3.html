@@ -7,6 +7,35 @@
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
+
+    <input type="button" value="night" onclick="
+      var dragon = document.querySelector('body');
+      if (this.value === 'night') {
+        dragon.style.backgroundColor='black';
+        dragon.style.color = 'white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length){
+          alist[i].style.color = 'powderblue';
+          i += 1;
+        }
+
+      } else {
+        dragon.style.backgroundColor='white';
+        dragon.style.color = 'black';
+        this.value = 'night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length){
+          alist[i].style.color = 'blue';
+          i += 1;
+        }
+      }
+    ">
+
     <div id="grid">
       <ol>
         <li><a href="1.html">HTML</a></li>
